@@ -12,7 +12,7 @@ package randommessagegenerator;
 public class Startup {
 
     public static void main(String[] args) {
-        Message m = new Message();
+        RandomMessageGenerator m = new RandomMessageGenerator();
                 
         m.addMessage("Cat");
         m.addMessage("Dog");
@@ -29,8 +29,10 @@ public class Startup {
 //        System.out.println("List w/o dupes:");
 //        m.displayList();
         
-        System.out.println(m.getRandomMessage());
+//        System.out.println(m.getRandomMessage());
         
+        m.removeMessage("Dog");
+        m.displayList();
         
     }
     

@@ -11,12 +11,12 @@ import java.util.*;
  *
  * @author Josh
  */
-public class Message {
+public class RandomMessageGenerator {
 
-    List<String> messageList = new ArrayList<>();
+    private List<String> messageList;
 
-    public Message() {
-
+    public RandomMessageGenerator() {
+        messageList = new ArrayList<>();
     }
 
     public void displayList() {
@@ -38,14 +38,11 @@ public class Message {
 
     public void addMessage(String message) {
         messageList.add(message);
+        removeDupes();
     }
 
     public void removeMessage(String message) {
-        for (String s : messageList) {
-            if (s.equals(message)) {
-                messageList.remove(s);
-            }
-        }
+        messageList.remove(message);
     }
 
     public List<String> getMessageList() {
